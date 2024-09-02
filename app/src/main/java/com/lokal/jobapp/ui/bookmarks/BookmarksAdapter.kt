@@ -32,9 +32,9 @@ class BookmarksAdapter : RecyclerView.Adapter<BookmarksAdapter.BookmarksViewHold
         RecyclerView.ViewHolder(binding.root) {
         fun bind(job: JobResult) {
             binding.titleTextView.text = job.title
-            binding.tvLocality.text = job.locality.toString()
-            binding.txtMinSalary.text = job.salary_min.toString()
-            binding.tvPhone.text = job.whatsapp_no
+            binding.tvLocality.text = job.locality.toString() ?: "Unknown"
+            binding.txtMinSalary.text = job.salary_min.toString() ?: "Unknown"
+            binding.tvPhone.text = job.whatsapp_no ?: "123456789"
         }
     }
 }
