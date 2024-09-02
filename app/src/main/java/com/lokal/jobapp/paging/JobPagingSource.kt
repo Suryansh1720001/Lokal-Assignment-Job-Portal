@@ -1,9 +1,7 @@
-package com.lokal.jobapp.data.repository
+package com.lokal.jobapp.paging
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.google.gson.Gson
 import com.lokal.jobapp.data.model.JobResult
 import com.lokal.jobapp.data.remote.ApiService
 

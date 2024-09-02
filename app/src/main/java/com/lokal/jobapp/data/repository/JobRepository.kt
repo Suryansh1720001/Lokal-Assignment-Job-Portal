@@ -6,6 +6,7 @@ import androidx.paging.PagingData
 import com.lokal.jobapp.data.local.JobDao
 import com.lokal.jobapp.data.model.JobResult
 import com.lokal.jobapp.data.remote.ApiService
+import com.lokal.jobapp.paging.JobsPagingSource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

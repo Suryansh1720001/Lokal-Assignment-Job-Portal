@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lokal.jobapp.databinding.FragmentJobsBinding
+import com.lokal.jobapp.paging.JobLoaderAdapter
 import com.lokal.jobapp.ui.base.BaseFragment
 import com.lokal.jobapp.ui.jobDetailsActicity.JobsDetailActivity
 import com.lokal.jobapp.utils.Resource
@@ -45,7 +46,10 @@ class JobsFragment : BaseFragment<FragmentJobsBinding>() {
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = jobAdapter
+        recyclerView.adapter = jobAdapter.withLoadStateHeaderAndFooter(
+            header = JobLoaderAdapter(),
+            footer = JobLoaderAdapter()
+        )
     }
 
     private fun observeJobs() {

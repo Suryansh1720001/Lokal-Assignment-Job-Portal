@@ -1,4 +1,4 @@
-package com.lokal.jobapp.ui.jobs
+package com.lokal.jobapp.paging
 
 import android.view.LayoutInflater
 import android.view.View
